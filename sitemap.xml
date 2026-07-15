@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://cocodedk.github.io/swanready-story/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://cocodedk.github.io/swanready-story/story.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cocodedk.github.io/swanready-story/story.html?lang=en" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://cocodedk.github.io/swanready-story/story.html?lang=da" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://cocodedk.github.io/swanready-story/story.html?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cocodedk.github.io/swanready-story/story.html" />
+  </url>
+</urlset>
