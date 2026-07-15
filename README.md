@@ -1,7 +1,9 @@
 # SwanReady — a two-minute story
 
-A wordless, music-backed mobile story about [SwanReady](https://cocode.dk). English · Dansk · Español (`?lang=en|da|es`).
+Hub: https://cocodedk.github.io/swanready-story/
 
-Watch the full documentary: https://youtu.be/7V3o1Cis_m4
+- `index.html` — hub linking everything below
+- `story.html` — interactive story (`?lang=en|da|es`)
+- `swanready-story-{en,da,es}.mp4` — vertical video versions
 
-Music: "Looping Ascent" — Joel Cummins.
+Full documentary: https://youtu.be/7V3o1Cis_m4 · Music: "Looping Ascent" — Joel Cummins.
