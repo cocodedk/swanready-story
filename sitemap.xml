@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cocodedk.github.io/swanready-story/</loc>
+    <loc>https://swanready.cocode.dk/</loc>
     <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://cocodedk.github.io/swanready-story/story.html</loc>
+    <loc>https://swanready.cocode.dk/story.html</loc>
     <lastmod>2026-07-15</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cocodedk.github.io/swanready-story/story.html?lang=en" />
-    <xhtml:link rel="alternate" hreflang="da" href="https://cocodedk.github.io/swanready-story/story.html?lang=da" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://cocodedk.github.io/swanready-story/story.html?lang=es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://cocodedk.github.io/swanready-story/story.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://swanready.cocode.dk/story.html?lang=en" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://swanready.cocode.dk/story.html?lang=da" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://swanready.cocode.dk/story.html?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://swanready.cocode.dk/story.html" />
   </url>
 </urlset>

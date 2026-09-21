@@ -1,6 +1,6 @@
 # SwanReady — a two-minute story
 
-Hub: https://cocodedk.github.io/swanready-story/
+Hub: https://swanready.cocode.dk/
 
 - `index.html` — hub linking everything below
 - `story.html` — interactive story (`?lang=en|da|es`)
