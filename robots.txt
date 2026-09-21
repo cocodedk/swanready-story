@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cocodedk.github.io/swanready-story/sitemap.xml
+Sitemap: https://swanready.cocode.dk/sitemap.xml
