@@ -43,16 +43,20 @@ body {
   background: var(--green-deep);
   color: var(--cream);
   font-family: var(--serif);
-  display: flex; align-items: center; justify-content: center;
+  display: flex; flex-direction: column;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* The phone-shaped stage; letterboxed on desktop, full-bleed on phones. */
+/* The phone-shaped stage; letterboxed on desktop, full-bleed on phones.
+   flex (not a fixed 100dvh) lets the cocode.dk head above it take its own
+   row without the stage overflowing the viewport; aspect-ratio keeps the
+   letterboxed phone's proportions once its height is whatever's left. */
 .stage {
   position: relative;
-  width: 100vw; height: 100dvh;
-  max-width: 100vw;
+  align-self: center;
+  width: 100vw; max-width: 100vw;
+  flex: 1 1 auto; min-height: 0;
   background:
     radial-gradient(120% 90% at 50% 0%, #1C3D26 0%, var(--green) 55%, var(--green-deep) 100%);
   overflow: hidden;
@@ -62,7 +66,8 @@ body {
 }
 @media (min-width: 520px) {
   .stage {
-    width: min(430px, 46dvh); height: min(932px, 96dvh);
+    width: auto; max-width: 430px;
+    flex: 0 1 932px; aspect-ratio: 430 / 932;
     border-radius: 26px;
     box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(201,162,75,.25);
   }
@@ -206,7 +211,7 @@ body {
 }
 
 /* ── render mode (?render=1): non-interactive MP4 capture ─ */
-.render :is(#beginBtn, .langs, #replayBtn, .chrome-buttons, .tap) { display: none; }
+.render :is(#beginBtn, .langs, #replayBtn, .chrome-buttons, .tap, cocode-head) { display: none; }
 .render .stage, .render.stage { cursor: none; }
 
 /* ── tap zones (invisible, under the chrome) ────────────── */
@@ -271,8 +276,17 @@ body {
   body:not(.render) .slide.is-active .steps li { animation: none; }
 }
 </style>
+<link rel="stylesheet" href="https://brand.cocode.dk/v1.css">
+<script type="module" src="https://brand.cocode.dk/v1.js"></script>
 </head>
 <body>
+<!-- The cocode.dk family frame. This page is a full-bleed, tap-through story
+     stage (its own internal chrome already covers progress/pause/mute), so
+     only the head is added; the stage takes .flex(1) of whatever height is
+     left. No foot here — index.html, one tap away, already carries it. -->
+<cocode-head project="SwanReady" accent="#C9A24B" on-accent="#0E2415" dark>
+  <a href="https://cocode.dk">cocode.dk</a>
+</cocode-head>
 <main class="stage" id="stage" aria-roledescription="story">
   <div class="grain" aria-hidden="true"></div>
 
