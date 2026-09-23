@@ -12,6 +12,8 @@
 <link rel="canonical" href="https://swanready.cocode.dk/">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://brand.cocode.dk/v1.css">
+<script type="module" src="https://brand.cocode.dk/v1.js"></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SwanReady">
 <meta property="og:title" content="SwanReady — eco-label compliance, walked through">
@@ -53,9 +55,14 @@
     min-height:100dvh; color:var(--cream);
     font-family: Georgia, "Times New Roman", serif;
     background: radial-gradient(120% 90% at 50% 0%, #1C3D26 0%, var(--green) 55%, var(--deep) 100%);
-    display:flex; align-items:center; justify-content:center; padding:40px 20px;
+    display:flex; flex-direction:column;
   }
-  main { width:100%; max-width:430px; text-align:center; display:grid; gap:30px; }
+  /* main carries the padding/centering that body used to own, so the frame
+     can sit above and below it without disturbing the content's own width. */
+  main { width:100%; max-width:470px; margin:auto; padding:40px 20px 0;
+    text-align:center; display:grid; gap:30px; }
+  /* The cocode.dk frame lines up with main's own box (470px, 20px gutter). */
+  cocode-head, cocode-foot { --cocode-max:470px; --cocode-gutter:20px; }
   .kicker { font-family:"Courier New",monospace; font-size:12px; letter-spacing:.32em;
     text-transform:uppercase; color:var(--gold); }
   h1 { font-size:52px; font-weight:600; letter-spacing:-.01em; }
@@ -77,7 +84,8 @@
   a.btn:focus-visible { outline:3px solid var(--cream); outline-offset:2px; }
   a.btn:active { transform:translateY(1px); }
   .note { font-size:13.5px; color:var(--sage); line-height:1.5; }
-  footer { display:grid; gap:6px; }
+  footer { max-width:470px; margin:0 auto; padding:0 20px 40px; text-align:center;
+    display:grid; gap:6px; }
   footer p { font-family:"Courier New",monospace; font-size:11.5px;
     letter-spacing:.14em; color:var(--sage); }
   footer a { color:var(--sage); text-decoration:underline; text-underline-offset:3px; }
@@ -85,6 +93,10 @@
 </style>
 </head>
 <body>
+<!-- The cocode.dk family frame. Without JavaScript, its child link is a way home. -->
+<cocode-head project="SwanReady" accent="#C9A24B" on-accent="#0E2415" dark>
+  <a href="https://cocode.dk">cocode.dk</a>
+</cocode-head>
 <main>
   <header>
     <p class="kicker">Compliance, walked through</p>
@@ -122,11 +134,15 @@
   </section>
 
   <div class="rule"></div>
-  <footer>
-    <p>Music — “Looping Ascent”, Joel Cummins</p>
-    <p>Built by <a href="https://linkedin.com/in/babakbandpey" target="_blank" rel="noreferrer">Babak Bandpey</a> ·
-       <a href="https://cocode.dk" target="_blank" rel="noreferrer">Cocode</a></p>
-  </footer>
 </main>
+
+<footer>
+  <p>Music — “Looping Ascent”, Joel Cummins</p>
+  <p>Built by <a href="https://linkedin.com/in/babakbandpey" target="_blank" rel="noreferrer">Babak Bandpey</a></p>
+</footer>
+
+<cocode-foot repo="cocodedk/swanready-story" dark>
+  <a href="https://cocode.dk">cocode.dk</a>
+</cocode-foot>
 </body>
 </html>
